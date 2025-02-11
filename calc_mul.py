@@ -10,7 +10,10 @@ def calc(A,B):
                 a=float(ai)
                 b=float(bi)
                 if 0<a and a<b and b<1000:
-                        valid=True
+                        if a.is_integer() and b.is_integer():
+                                valid=True
+                        else:
+                                valid=False
                 else:
                         valid=False
         else:
@@ -32,3 +35,4 @@ def main ():
 
 if __name__ == '__main__':
 	main()
+
